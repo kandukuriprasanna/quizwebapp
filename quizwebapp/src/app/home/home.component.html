@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1-12" id="site-content">
+            <h3>About Quiz Web App!</h3>
+            <p>
+                This is a sample web application, it has two system users(demouser1 & demouser2) by default below are
+                the details of the users
+            </p>
+
+            <ul>
+                <li>email: demouser1@quiz.com, password: 111111</li>
+                <li>email: demouser2@quiz.com, password: 222222</li>
+            </ul>
+            <p>
+
+            </p>
+            <p>
+                New users can also register and attempt the quiz by loggingIn to the website!
+            </p>
+            <p>
+                <b>Note:</b> Currently users are being stored in angular service not in database.
+            </p>
+            <nav class="nav justify-content">
+                <a class="nav-link" class="btn btn-primary" [routerLink]="['/registration']"
+                    routerLinkActive="router-link-active" class="btn btn-primary">Sign Up</a>
+                <a class="nav-link" [routerLink]="['/login']"  class="btn btn-primary" routerLinkActive="router-link-active">Sign In</a>
+            </nav>
+        </div>
+    </div>
+</div>

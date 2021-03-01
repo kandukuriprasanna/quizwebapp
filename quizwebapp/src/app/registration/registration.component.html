@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="card text-left">
+        <div class="card-body">
+            <h4 class="card-title">Sign Up!</h4>
+            <sub> please fill the below details..</sub>
+            <div class="card-text">
+                <form #registrationForm="ngForm" (ngSubmit)="onRegistration($event)" name="registrationForm" ngNativeValidate>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-1-12 col-form-label">Name</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" name = "name" required class="form-control" [(ngModel)]="this.user.name"
+                                placeholder="enter your full name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-1-12 col-form-label">Email</label>
+                        <div class="col-sm-1-12">
+                            <input type="email" name="email" required class="form-control" placeholder="email" [(ngModel)]="user.email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-1-12 col-form-label">Password</label>
+                        <div class="col-sm-1-12">
+                            <input type="password" minlength="6" name="password" required class="form-control" placeholder="password" [(ngModel)]="user.password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobilenumber" class="col-sm-1-12 col-form-label">Phone Number</label>
+                        <div class="col-sm-1-12">
+                            <input type="number" required class="form-control" name="phoneNumber" [(ngModel)]="user.phoneNumber"
+                                placeholder="mobile number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode" class="col-sm-1-12 col-form-label">Pincode</label>
+                        <div class="col-sm-1-12">
+                            <input type="number" required class="form-control" name="pincode"  [(ngModel)]="user.pincode" placeholder="Pincode">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-1-12">
+                            <button type="submit" class="btn btn-primary"> Register </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container" *ngIf="!isQuizCompleted">
+    <div class="row">
+        <div class="col-md-1-12">
+            <h2>Hi {{this.userService.getLogedInUser().name}} !</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1-12">
+            <h2>Question {{this.curQuestion}} of {{this.questions.length}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1-12">
+            <app-question [question]="questions[this.curQuestion-1]" (answer)="updateScore($event)"></app-question>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1-12">
+            <button type="button" class="btn btn-primary" (click)="onNext()">Next</button>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="isQuizCompleted">
+    <div class="row">
+        <div class="col-md-1-12" class="alert alert-info" role="alert">
+            <h3>Your Score: Congratulations..! You have answered <b>{{this.userScore}}</b> out of <b>{{this.questions.length}}</b>
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1-12">                   
+            <p>Thank you for attempting the quiz..! You Can Go back to the home screen by clicking on below link</p>     
+            <nav class="nav justify-content-center">
+                <a class="nav-link" class="btn btn-primary" [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
+                <a class="nav-link" class="btn btn-primary" [routerLink]="['/login']" routerLinkActive="router-link-active">Sign Out</a>            
+                <a class="nav-link" class="btn btn-primary" [routerLink]="['/leaderboard']" routerLinkActive="router-link-active">Leader Board</a>                        
+            </nav>
+        </div>
+    </div>
+</div>
