@@ -1,0 +1,28 @@
+<div class="alert alert-primary" role="alert">
+    <strong>Leader Board</strong>
+</div>
+<table class="table table-bordered">
+    <thead class="thead-inverse">
+        <tr>
+            <th>#</th>
+            <th>User</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of this.users;let i=index">
+                <td scope="row"> {{i+1}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.userScore}}</td>
+            </tr>
+        </tbody>
+</table>
+
+<div class="row">      
+    <!-- Nav tabs -->
+    <nav class="nav justify-content">
+        <a class="nav-link" class="btn btn-primary" [routerLink]="['']"
+            routerLinkActive="router-link-active" class="btn btn-primary">Home</a>
+        <a class="nav-link" [routerLink]="['/login']"  class="btn btn-primary" routerLinkActive="router-link-active">Sign Out</a>
+    </nav>
+  </div>

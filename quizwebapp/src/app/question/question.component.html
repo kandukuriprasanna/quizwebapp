@@ -1,0 +1,23 @@
+
+
+<div id="question">
+  <h3>{{this.question.quest}}</h3>
+</div>
+
+<form #questionForm="ngForm">
+  <div class="form-check" *ngFor="let item of this.question.options; let i=index;">
+      <label class="form-check-label"
+        [style.background-color]="getBackGroundColor(item)">
+        <input type="radio" 
+          class="form-check-input" 
+          [value]="item" 
+          id="ans"
+          name="ans"
+          [(ngModel)]="selectedOption" 
+          (change)="onOptionSelect()"
+          [disabled]="selectedOption">
+        {{item}}
+    </label>
+  </div>
+</form>
+

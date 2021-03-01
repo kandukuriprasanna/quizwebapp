@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+  }
+
+  #siteheader {
+    background-color: #007BBA;
+    padding: 20px;
+    align-items: center;
+    box-shadow: darkcyan;
+    text-align: center;
+    color: white;
+}
+
+#site-content {
+    margin: 50px;
+    padding: 20px;
+    background-color: white;
+    color:  black;
+}
+
+.btn-primary {
+    padding: 10px;
+    margin: 0px 20px;
+}
